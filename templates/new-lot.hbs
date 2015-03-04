@@ -1,0 +1,14 @@
+<h2>Add New Lot</h2>
+<form>
+  <div class="form-group">
+    <label for="description">Description</label>
+    {{textarea value=description id="description" class="form-control" rows="5"}}
+  </div>
+
+  <div class="form-group">
+    <label for="bidNumber">Bid Number</label>
+    {{input value=bidNumber id="bidNumber" class="form-control"}}
+  </div>
+
+  <button class="btn btn-primary" {{action 'save'}}>Save</button>
+</form>

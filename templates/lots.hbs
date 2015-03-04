@@ -1,31 +1,11 @@
-<h2> Vanagon Auction </h2>
+<h1> Vanagon Auction </h1>
 
-  <div class="row">
+<ul>
+  {{#each lot in model}}
+  <li>{{#link-to 'lot' lot}}{{lot.description}}{{/link-to}}</li>
+  <li>{{#link-to 'lot' lot}}{{lot.bidNumber}}{{/link-to}}</li>
 
-    <div class="col-md-12"
+  {{/each}}
+</ul>
 
-      <form id="lots-form" class="form-inline" role="form">
-        <div class="form group">
-          {{input id='lot' class="form-control" value=description}}
-        </div>
-
-        <div class="form group">
-          {{input id='lot' class="form-control" value=bidNumber}}
-        </div>
-        <button class="btn btn-danger" {{action 'addLot'}}>Add Lot</button>
-
-
-
-      </form>
-
-      {{#each}}
-
-      <p>{{#link-to 'lot' this.id}}{{description}} == {{bidNumber}}{{/link-to}}</p>
-
-      {{/each}}
-    </div>
-
-    <div>
-      {{outlet}}
-  </div>
-</div>
+{{#link-to 'new-lot' classNames="btn btn primary"}}New Vanagon{{/link-to}}

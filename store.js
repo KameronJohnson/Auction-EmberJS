@@ -1,4 +1,2 @@
-// Auction.ApplicationSerializer = DS.LSSerializer.extend();
-// Auction.ApplicationAdapter = DS.LSAdapter.extend();
-
-var lots = []
+Auction.ApplicationSerializer = DS.LSSerializer.extend();
+Auction.ApplicationAdapter = DS.LSAdapter.extend();
