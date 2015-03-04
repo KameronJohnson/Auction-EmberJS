@@ -1,4 +1,5 @@
 Auction.Router.map(function() {
-  this.resource('auctions',{path: '/'});
+  this.resource('lots',{path: '/'});
+  this.resource('lot', {path: 'lots/:lot_id'});
 
 });

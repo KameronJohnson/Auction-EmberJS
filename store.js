@@ -1,2 +1,4 @@
-Blogger.ApplicationSerializer = DS.LSSerializer.extend();
-Blogger.ApplicationAdapter = DS.LSAdapter.extend();
+// Auction.ApplicationSerializer = DS.LSSerializer.extend();
+// Auction.ApplicationAdapter = DS.LSAdapter.extend();
+
+var lots = []
