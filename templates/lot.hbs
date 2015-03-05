@@ -25,12 +25,10 @@
 <h2>Items</h2>
 
 {{#each item in items itemController="item"}}
-  <p>
-    {{item.description}}
-    <button class="btn btn-xs btn-danger" {{action 'delete'}}>delete</button>
-  </p>
+<!-- {{each item in items}} -->
 
   <p>
+    {{item.description}}
     {{item.bidNumber}}
     <button class="btn btn-xs btn-danger" {{action 'delete'}}>delete</button>
   </p>

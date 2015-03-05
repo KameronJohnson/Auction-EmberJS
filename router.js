@@ -5,5 +5,6 @@ Auction.Router.map(function() {
   });
 
   this.resource('new-lot');
+  this.resource('recent-items')
 
 });
