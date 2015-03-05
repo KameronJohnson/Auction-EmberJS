@@ -28,8 +28,10 @@
 <!-- {{each item in items}} -->
 
   <p>
-    {{item.description}}
     {{item.bidNumber}}
+    {{item.description}}
+
+
     <button class="btn btn-xs btn-danger" {{action 'delete'}}>delete</button>
   </p>
 {{/each}}
