@@ -11,7 +11,7 @@
     <button class="btn btn-primary" {{action 'save'}}>Save</button>
   </form>
   {{else}}
-  <p>{{body}}</p>
+  <!-- <p>{{body}}</p> -->
 
   <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
 {{/if}}
@@ -21,19 +21,17 @@
 <h2>Up For Auction:</h2>
 
 {{#each item in items itemController="item"}}
-<!-- {{each item in items}} -->
 
   <ul class="hidden-ul">
-    <li><img {{bind-attr src=item.image}} style="width:250px;length250px"></li>
-    <li><p>Year: {{item.year}}</p></li>
+    <li><p>{{#link-to 'item' item.id}}Year: {{item.year}}{{/link-to}}</p></li>
+    <li><img {{bind-attr src=item.image }} style="width:250px;length:250px"></li>
     <li><p>Model: {{item.type}}</p></li>
     <li><p>Starting Price: ${{item.price}}</p></li>
-
     <button class="btn btn-xs btn-danger" {{action 'delete'}}>Remove</button>
   </ul>
-
 
     <hr>
 {{/each}}
 
-<p>{{#link-to 'new-item' this class="btn btn-success"}}New Vanagon:{{/link-to}}</p>
+
+{{#link-to 'new-item' this class="btn btn-success"}}New Vanagon:{{/link-to}}
