@@ -1,4 +1,4 @@
 Auction.Lot = DS.Model.extend({
-  title: DS.attr(),
+  era: DS.attr(),
   items: DS.hasMany('item', {async: true})
 });

@@ -1,11 +1,11 @@
-<h1>{{title}}</h1>
+<h1>{{era}}</h1>
 
 {{#if isEditing}}
 
   <form>
     <div class="form-group">
-      <label for="title">Title</label>
-      {{input value=title id="title" class="form-control"}}
+      <label for="era">Era</label>
+      {{input value=era id="era" class="form-control"}}
     </div>
 
     <button class="btn btn-primary" {{action 'save'}}>Save</button>
@@ -18,20 +18,22 @@
 
 {{outlet}}
 
-<h2>Items</h2>
+<h2>Up For Auction:</h2>
 
 {{#each item in items itemController="item"}}
 <!-- {{each item in items}} -->
 
   <ul class="hidden-ul">
     <li><img {{bind-attr src=item.image}} style="width:250px;length250px"></li>
-    <li><h5>Bid Number: {{item.bidNumber}}</h5></li>
-    <li><p>Description: {{item.description}}</p></li>
-    <button class="btn btn-xs btn-danger" {{action 'delete'}}>delete</button>
+    <li><p>Year: {{item.year}}</p></li>
+    <li><p>Model: {{item.type}}</p></li>
+    <li><p>Starting Price: ${{item.price}}</p></li>
+
+    <button class="btn btn-xs btn-danger" {{action 'delete'}}>Remove</button>
   </ul>
 
 
     <hr>
 {{/each}}
 
-<p>{{#link-to 'new-item' this class="btn btn-success"}}New item{{/link-to}}</p>
+<p>{{#link-to 'new-item' this class="btn btn-success"}}New Vanagon:{{/link-to}}</p>
