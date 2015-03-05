@@ -2,19 +2,15 @@
 
 {{#if isEditing}}
 
-
-
   <form>
     <div class="form-group">
       <label for="title">Title</label>
       {{input value=title id="title" class="form-control"}}
     </div>
 
-
-
     <button class="btn btn-primary" {{action 'save'}}>Save</button>
   </form>
-{{else}}
+  {{else}}
   <p>{{body}}</p>
 
   <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
@@ -27,13 +23,15 @@
 {{#each item in items itemController="item"}}
 <!-- {{each item in items}} -->
 
-  <p>
-    {{item.bidNumber}}
-    {{item.description}}
-
-
+  <ul class="hidden-ul">
+    <li><img {{bind-attr src=item.image}} style="width:250px;length250px"></li>
+    <li><h5>Bid Number: {{item.bidNumber}}</h5></li>
+    <li><p>Description: {{item.description}}</p></li>
     <button class="btn btn-xs btn-danger" {{action 'delete'}}>delete</button>
-  </p>
+  </ul>
+
+
+    <hr>
 {{/each}}
 
 <p>{{#link-to 'new-item' this class="btn btn-success"}}New item{{/link-to}}</p>
