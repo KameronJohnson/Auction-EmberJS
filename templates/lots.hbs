@@ -1,10 +1,13 @@
-<h1> Vanagon Auction </h1>
+<h1>Vanagon Auction</h1>
 
 <div class="col-md-12">
   {{#each lot in model}}
+  <hr style="height:2px;border:none;color:#333;background-color:#333;" />
   <h4>{{#link-to 'lot' lot}}{{lot.era}}{{/link-to}}</h4>
    <hr style="height:2px;border:none;color:#333;background-color:#333;" />
   {{/each}}
 </div>
 
-{{#link-to 'new-lot' classNames="btn btn primary"}}Add new Vanagon lot{{/link-to}}
+<br>
+
+{{#link-to 'new-lot' classNames="btn btn primary"}}Add Vanagon Lot{{/link-to}}
